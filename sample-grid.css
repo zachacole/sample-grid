@@ -7,6 +7,8 @@
 #sample {
 }
 
+
+
 /** ---UNIVERSAL--- **/
 
 *,
@@ -30,10 +32,6 @@ h1 {
 	transition: color 0.7s ease;
 }
 
-h1:hover {
-	color: #f68f8f
-}
-
 h2,
 p {
 	font-family: Helvetica, Arial, sans-serif;
@@ -48,22 +46,97 @@ p {
 	font-size: 1em;
 }
 
+h3 {
+	font-family: Futura, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
 /** ---HEADER--- **/
+
+#title {
+	background: #333e47;
+	width: 100%;
+	padding: 10px;
+	margin: 0;
+	text-align: center;
+}
+
+.nav {
+	margin: 0;
+	background: aqua;
+	list-style: none;
+	text-align: center;	
+}
+
+.nav li {
+	width: 100%;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.nav a {
+	margin: 0 auto;
+	text-decoration: none;
+	color: #fff;
+	transition: color 0.7s ease;
+}
+
+.row [class^="col"] {
+	padding: 0 20px;
+}
+
+.row [class^="col"] h2 {
+	text-align: center;
+}
+
+@media all and (min-width : 768px) {
+
+/** --- LARGE SCREEN --- **/
 
 header {
 	display: table;
+	background: #333e47;
 	width: 100%;
 }
 
 
 #title {
 	display: table-cell;
-	background: #333e47;
-	width: 100%;
+	width: 50%;
 	padding: 0 50px;
-	text-align: center;
+	text-align: left;
 	vertical-align: middle;
 }
+
+.nav {
+	display: table-cell;
+	background: #333e47;
+	width: 50%;
+	vertical-align: middle;
+	text-align: right;
+}
+
+.nav li:last-child {
+	margin-right: 30px;
+}
+
+.nav li {
+	display: inline;
+}
+
+.nav a {
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px;
+	color: #fff;
+	transition: color 0.7s ease;
+}
+
+.nav a:hover {
+	color: #f68f8f
+}
+
+
 
 /** ---GRID--- **/
 
@@ -76,8 +149,12 @@ header {
 	margin-bottom: 0;
 }
 
-[class*="col-"] {
+.row [class^="col"] {
 	padding: 10px 50px;
+}
+
+.row [class^="col"] h2 {
+	text-align: left;
 }
 
 .col-2-3 {
